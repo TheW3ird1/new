@@ -1,0 +1,4 @@
+# Application dependencies
+flask
+werkzeug
+pdf2docx
