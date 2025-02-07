@@ -1,5 +1,6 @@
 import os
 import traceback
+from flask import Flask, request, send_file, jsonify # Keep other imports
 
 from flask import Flask, send_file, request, jsonify
 from werkzeug.utils import secure_filename, send_from_directory
@@ -22,7 +23,7 @@ def allowed_file(filename):
 
 @app.route("/")
 def index():
-    return send_file('templates/index.html')
+    return "Hello from Flask! This is a test."  # Change this line
 
 @app.route('/convert', methods=['POST'])
 def convert_pdf_to_docx():
