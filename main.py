@@ -1,7 +1,3 @@
-# Suggested code may be subject to a license. Learn more: ~LicenseLog:4273683385.
-# Suggested code may be subject to a license. Learn more: ~LicenseLog:3086344228.
-# Suggested code may be subject to a license. Learn more: ~LicenseLog:4003835215.
-# Suggested code may be subject to a license. Learn more: ~LicenseLog:337780378.
 import os
 import traceback
 
