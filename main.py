@@ -1,6 +1,5 @@
 import os
 import traceback
-from flask import Flask, request, send_file, jsonify # Keep other imports
 
 from flask import Flask, send_file, request, jsonify
 from werkzeug.utils import secure_filename, send_from_directory
@@ -23,7 +22,7 @@ def allowed_file(filename):
 
 @app.route("/")
 def index():
-    return "Hello from Flask! This is a test."  # Change this line
+    return send_file('templates/index.html')
 
 @app.route('/convert', methods=['POST'])
 def convert_pdf_to_docx():
@@ -58,7 +57,7 @@ def convert_pdf_to_docx():
         return jsonify({'error': 'An error occurred during file conversion', 'details': str(e)}), 500
 
 def run_app():
-    app.run(debug=True, port=int(os.environ.get('PORT', 80)))
+    app.run(debug=True, port=8080, host='0.0.0.0')
 
 if __name__ == '__main__':
     run_app()
